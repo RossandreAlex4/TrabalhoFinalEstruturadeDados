@@ -1,0 +1,22 @@
+package ordenacao;
+
+public class BubbleSort {
+   public static void ordenar(int[] arr) {
+      int n = arr.length;
+      boolean trocou;
+      for (int i = 0; i < n - 1; i++) {
+         trocou = false;
+         for (int j = 0; j < n - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+               int temporario = arr[j];
+               arr[j] = arr[j + 1];
+               arr[j + 1] = temporario;
+               trocou = true;
+            }
+         }
+         if (!trocou) {
+            break;
+         }
+      }
+   }
+}
